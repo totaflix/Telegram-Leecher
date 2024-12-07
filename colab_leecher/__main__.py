@@ -25,9 +25,9 @@ async def start(client, message):
             [
                 InlineKeyboardButton(
                     "Repository 🦄",
-                    url="https://github.com/XronTrix10/Telegram-Leecher",
+                    url="https://github.com/",
                 ),
-                InlineKeyboardButton("Support 💝", url="https://t.me/Colab_Leecher"),
+                InlineKeyboardButton("Support 💝", url="https://t.me/nowbotupdate"),
             ],
         ]
     )
@@ -146,13 +146,7 @@ async def handle_url(client, message):
             reply_markup=keyboard,
             quote=True,
         )
-    elif BOT.State.started:
-        await message.delete()
-        await message.reply_text(
-            "<i>I am Already Working ! Please Wait Until I finish 😣!!</i>"
-        )
-
-
+    
 @colab_bot.on_callback_query()
 async def handle_options(client, callback_query):
     global BOT, MSG
@@ -434,13 +428,13 @@ async def help_command(client, message):
                 [
                     InlineKeyboardButton(
                         "Instructions 📖",
-                        url="https://github.com/XronTrix10/Telegram-Leecher/wiki/INSTRUCTIONS",
+                        url="https://github.com/totaflix/Telegram-Leecher/wiki/INSTRUCTIONS",
                     ),
                 ],
                 [
                     InlineKeyboardButton(  # Opens a web URL
                         "Channel 📣",
-                        url="https://t.me/Colab_Leecher",
+                        url="https://t.me/nowbotupdate",
                     ),
                     InlineKeyboardButton(  # Opens a web URL
                         "Group 💬",

@@ -146,6 +146,11 @@ async def handle_url(client, message):
             reply_markup=keyboard,
             quote=True,
         )
+        elif BOT.State.started:
+        await message.delete()
+        await message.reply_text(
+            "<i>I am Already Working ! Please Wait Until I finish 😣!!</i>"
+        )
     
 @colab_bot.on_callback_query()
 async def handle_options(client, callback_query):
